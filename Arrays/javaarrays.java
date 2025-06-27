@@ -48,20 +48,32 @@ public class javaarrays{
         return -1;
 
     }
+
+
+    public static void reverse_array(int arr[]){
+        int start = 0;
+        int end = arr.length-1;
+
+        while(start<end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        for(int i = 0; i<arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        
+    }
     public static void main(String args[]){
-        int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+        int numbers[] = {1,2,3,4,5,6,10,7,8,9};
         int toFind = 0;
 
-        int index = binary_search(numbers, toFind);
-
-        if(index<0){
-            System.out.println("not found");
-        }else{
-            index=index+1;
-            System.out.println("found at index "+index);
-        }
-
-        System.out.println();
+        //get_largest_array(numbers);
+        //toFind = binary_search(numbers, toFind);
+        //System.out.println(toFind);
+        reverse_array(numbers);
 
         
     }
