@@ -232,16 +232,151 @@ public class javafunctions {
         
     }
 
+    public static void star_pattern9(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i = 1; i<=n; i++){
+            //spaces
+            for(int j = 1; j<=n-i+1; j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j = 1; j<=n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void star_pattern10(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i = 1; i<=n; i++){
+            //spaces
+            for(int j = 1; j<=n-i+1; j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j = 1; j<=n; j++){
+                if(j==1 || j==n || i==1 || i==n){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void star_pattern11(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        //1st half
+
+        for(int i =1; i<=n; i++){
+            //spaces
+            for(int j = 1; j<=n-i+1; j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j = 1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        //2nd half
+        for(int i = n; i>=1; i--){
+            //spaces
+            for(int j = 1; j<=n-i+1; j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j = 1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void star_pattern12(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++){
+            //spaces
+            for(int j = 1; j <= n-i+1; j++){
+                System.out.print(" ");
+            }
+
+            //stars
+            for(int j = 1; j<=i; j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void star_pattern13(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++){
+            //spaces
+            for(int j = 1; j <= n-i+1; j++){
+                System.out.print(" ");
+            }
+
+            //stars
+            for(int j = 1; j<=i; j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+
+        for(int i = n-1; i >= 1; i--){
+            //spaces
+            for(int j = 1; j <= n-i+1; j++){
+                System.out.print(" ");
+            }
+
+            //stars
+            for(int j = 1; j<=i; j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void star_pattern14(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int i =1; i <= n; i++){
+            //spaces
+            for(int j = 1; j<= n-i; j++){
+                System.out.print(" ");
+            }
+            //numbers
+            for(int j = i;j>=1; j--){
+                System.out.print(j);
+            }
+            for(int j = 2; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
-        // int a = sc.nextInt();
-        // int s = sc.nextInt();
         
-        // int sum = sum(a, s);
-        // System.out.println("The sum is "+sum);
 
-        star_pattern8();
+        star_pattern14();
 
         
     }
