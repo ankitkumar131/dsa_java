@@ -1,3 +1,5 @@
+import java.lang.*;
+// import java.sql.Array;
 import java.util.*;
 
 public class javaarrays{
@@ -66,6 +68,25 @@ public class javaarrays{
         }
         
     }
+
+
+    public static void second_largest(int arr[]){
+        Arrays.sort(arr);
+        int largest = arr[arr.length-1];
+        int q;
+        for(int i =0; i<arr.length; i++){
+            for(int j = arr.length; j>=0; j--){
+                if(arr[i]<largest){
+                    q = arr[i];
+                    
+                }
+            }
+        }
+        System.out.println("Second Largest Integer is: "+ q);
+    }
+
+
+
     public static void main(String args[]){
         int numbers[] = {1,2,3,4,5,6,10,7,8,9};
         int toFind = 0;
@@ -73,7 +94,11 @@ public class javaarrays{
         //get_largest_array(numbers);
         //toFind = binary_search(numbers, toFind);
         //System.out.println(toFind);
-        reverse_array(numbers);
+        // reverse_array(numbers);
+
+        int arrr[] = {1,2,5,7,8,9,6,4,2,4,5,8,7,7,10,13,58,55};
+
+        second_largest(arrr);
 
         
     }
